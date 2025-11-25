@@ -48,3 +48,4 @@ Dieses Dokument dient zur chronologischen Dokumentation aller wichtigen Schritte
 - Verbindung zu GitLab hergestellt und gepusht:
   - `git push -u origin main`
 
+Test-Push funktioniert
