@@ -49,3 +49,48 @@ Dieses Dokument dient zur chronologischen Dokumentation aller wichtigen Schritte
   - `git push -u origin main`
 
 Test-Push funktioniert
+
+
+### 🔐 Systembenutzer & SSH-Basisabsicherung
+- Dedizierten Admin-Benutzer erstellt: **`mxadmin`**
+- SSH-Root-Login vollständig deaktiviert  
+- SSH-Zugang ausschließlich per **SSH-Key**, keine Passwörter erlaubt
+- Folgende Authentifizierungsarten deaktiviert:
+  - `PasswordAuthentication no`
+  - `KbdInteractiveAuthentication no`
+  - `ChallengeResponseAuthentication no`
+- SSH-Port auf **2222** geändert (anstatt 22)
+- Firewall-Regeln vorher angepasst (2222 geöffnet, alte OpenSSH-Regel entfernt)
+- SSH-Dienst neu geladen und Verbindungsaufbau erfolgreich über Port 2222 getestet
+
+### 🔥 Firewall (UFW) konfiguriert
+- UFW aktiviert
+- Regel gesetzt: `allow 2222/tcp`
+- Alte Regeln für Port 22 erfolgreich entfernt
+- Ergebnis: Nur Port **2222** ist öffentlich erreichbar  
+  → Server akzeptiert ausschließlich sichere SSH-Key-Verbindungen.
+
+### 🚨 Fail2ban installiert & gehärtet
+- Fail2ban installiert
+- Lokale Konfigurationsdatei `jail.local` erstellt
+- Einstellungen:
+  - `enabled = true`
+  - `maxretry = 3`
+  - `bantime = 604800`   (7 Tage)
+  - `findtime = 1800`    (30 Minuten)
+- Fail2ban gestartet und Status geprüft:  
+  → Angriffe werden korrekt erkannt & blockiert.
+
+### 🔄 Automatische Sicherheitsupdates aktiviert
+- `unattended-upgrades` aktiviert und konfiguriert
+- System installiert künftig automatische Security-Patches
+- Auto-Clean & Auto-Remove aktiviert
+
+### 📌 Ergebnis
+Der Server ist nun auf einem **sehr hohen Sicherheitsniveau**:
+- Kein Root-Login möglich  
+- Keine Passwortlogins: SSH nur per Key  
+- SSH läuft auf einem nicht-standard Port  
+- Firewall minimal & sicher  
+- Fail2ban blockt Angriffe zuverlässig  
+- Sicherheitsupdates laufen automatisch  
