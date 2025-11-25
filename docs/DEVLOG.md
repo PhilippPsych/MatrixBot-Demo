@@ -94,3 +94,49 @@ Der Server ist nun auf einem **sehr hohen Sicherheitsniveau**:
 - Firewall minimal & sicher  
 - Fail2ban blockt Angriffe zuverlässig  
 - Sicherheitsupdates laufen automatisch  
+
+- 📊 **Log-Überwachung eingerichtet**
+  - eigenes Monitoring-Skript `log-check.sh`
+
+### 🧩 Matrix / Synapse Homeserver
+- 🏗️ **Synapse installiert (Docker + docker-compose)**
+  - Projektstruktur in `~/mx-demokratiebot/synapse`
+  - Volumes & Datenverzeichnis eingerichtet
+  - Homeserver erreichbar unter Port 8008
+
+- 🌐 **Domain eingerichtet**
+  - zuerst DuckDNS probiert  
+  - anschließend echte Domain gekauft → **demokratiebot.de**
+  - DNS (A-Record) auf Server-IP gesetzt
+
+- 🛠️ **Servername in Synapse angepasst**
+  - `server_name: demokratiebot.de`
+  - Container neu gebaut & gestartet
+
+### 🌍 Webserver, SSL & Reverse Proxy
+- 🧩 **Nginx als Reverse Proxy eingerichtet**
+  - HTTP → HTTPS Weiterleitung
+  - Proxy-Pass zur Synapse-API
+  - `.well-known` für Matrix hinzugefügt
+
+- 🔐 **SSL (Let's Encrypt / Certbot) eingerichtet**
+  - Zertifikat erfolgreich ausgestellt
+  - automatische Verlängerung aktiviert
+  - HTTPS voll funktionsfähig
+
+- 🌐 **Firewall für Web-Traffic geöffnet**
+  - `ufw allow 80/tcp`
+  - `ufw allow 443/tcp`
+
+### 🧭 Well-Known Endpoints
+- `/var/www/html/.well-known/matrix/client` erstellt
+- `/var/www/html/.well-known/matrix/server` erstellt
+- Validierung erfolgreich
+
+### 🛠️ Tools & Hilfsprogramme
+- 📦 `jq` installiert (für JSON-Validierung)
+
+### 👤 Matrix-Benutzerverwaltung
+- 🛡️ **Admin-Konto erfolgreich erstellt**
+  - Login über Element funktionierte ohne Probleme
+
