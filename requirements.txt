@@ -1,0 +1,6 @@
+matrix-nio>=0.24.0
+python-dotenv
+schedule
+openai
+aiohttp
+aiofiles

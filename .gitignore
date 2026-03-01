@@ -1,0 +1,37 @@
+# Secrets & Credentials
+.env
+*.pem
+*.key
+*.secret
+
+# Matrix Crypto Stores
+matrix_sidecar/store/
+crypto_store/
+rust-sidecar/matrix_store/
+pantalaimon-data/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.Rhistory
+
+# Rust Build
+matrix_sidecar/target/
+rust-sidecar/target/
+
+# Logs
+*.log
+sidecar.log
+bot.log
+
+# Backups
+backup_*.tar.gz
+
+# Mac
+.DS_Store
+
+# Signier-Skripte mit eingebetteten Keys
+sign_device*.py
+signature_payload.json
+*.backup*
