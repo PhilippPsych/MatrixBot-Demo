@@ -1,0 +1,13 @@
+{
+  "user_id": "2fe33a76-a80c-4c2a-8bcf-959e2df83142",
+  "phase": "waiting",
+  "group": "Maintenance",
+  "start_date": "2025-11-06T09:23:36.387502",
+  "last_evaluation_day": 0,
+  "pending_reevaluation": false,
+  "engagement_points": 17,
+  "total_interventions": 10,
+  "last_intervention_date": "2025-11-16T09:00:50.172876",
+  "level": 2,
+  "reevaluation_count": 0
+}

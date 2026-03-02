@@ -1,0 +1,13 @@
+{
+  "user_id": "1ed1a836-e70f-45d7-a5fe-6fe6dd78e673",
+  "phase": "waiting",
+  "group": "Preparation",
+  "start_date": "2025-10-30T13:56:40.159475",
+  "last_evaluation_day": 0,
+  "pending_reevaluation": false,
+  "engagement_points": 10,
+  "total_interventions": 10,
+  "last_intervention_date": "2025-11-09T09:01:05.250437",
+  "level": 2,
+  "reevaluation_count": 0
+}

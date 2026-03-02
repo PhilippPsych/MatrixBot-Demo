@@ -1,0 +1,13 @@
+{
+  "user_id": "448e78e0-3252-421a-8394-921ff517e768",
+  "phase": "waiting",
+  "group": "Action",
+  "start_date": "2025-11-05T16:38:55.710865",
+  "last_evaluation_day": 0,
+  "pending_reevaluation": false,
+  "engagement_points": 10,
+  "total_interventions": 10,
+  "last_intervention_date": "2025-11-15T09:00:51.684851",
+  "level": 2,
+  "reevaluation_count": 0
+}

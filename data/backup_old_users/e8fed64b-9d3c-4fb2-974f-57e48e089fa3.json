@@ -1,0 +1,13 @@
+{
+  "user_id": "e8fed64b-9d3c-4fb2-974f-57e48e089fa3",
+  "phase": "waiting",
+  "group": "Contemplation",
+  "start_date": "2025-10-30T14:34:36.644490",
+  "last_evaluation_day": 0,
+  "pending_reevaluation": false,
+  "engagement_points": 10,
+  "total_interventions": 10,
+  "last_intervention_date": "2025-11-09T09:03:00.671275",
+  "level": 2,
+  "reevaluation_count": 0
+}

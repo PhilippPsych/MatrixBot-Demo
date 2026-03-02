@@ -1,0 +1,7 @@
+2026-01-18 20:09:11 | @testadvance:demokratiebot.de | e | a
+2026-01-28 08:29:32 | @pilotuser14:demokratiebot.de | d | a
+2026-01-28 09:24:01 | @pilotuser7:demokratiebot.de | c | b
+2026-01-28 11:24:03 | @pilotuser5:demokratiebot.de | c | b
+2026-01-30 11:30:02 | @pilotuser9:demokratiebot.de | d | a
+2026-02-01 10:43:14 | @pilotuser6:demokratiebot.de | c | b
+2026-02-12 16:46:21 | @pilotuser22:demokratiebot.de | c | b

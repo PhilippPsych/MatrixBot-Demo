@@ -1,0 +1,13 @@
+2026-01-12 17:34:54 | @milene:demokratiebot.de | 14 | a | b | Precontemplation | intervention | AB1146
+2026-01-14 12:02:40 | @kueper:demokratiebot.de | 30 | d | a | Action | intervention | PT0647
+2026-01-18 19:56:02 | @testadvance:demokratiebot.de | 26 | e | a | Maintenance | intervention | PTELA3
+2026-01-19 20:06:49 | @testuser8:demokratiebot.de | 24 | e | a | Maintenance | intervention | HN0825
+2026-01-21 12:02:03 | @testuser11:demokratiebot.de | 25 | a | b | Precontemplation | intervention | HN0825
+2026-01-21 13:51:40 | @admin:demokratiebot.de | 25 | b | a | Contemplation | intervention | JL0916
+2026-01-21 16:23:30 | @pilotuser9:demokratiebot.de | 27 | e | a | Maintenance | intervention | LI0403
+2026-01-21 18:19:34 | @pilotuser7:demokratiebot.de | 20 | c | b | Preparation | intervention | SR0456
+2026-01-21 21:01:45 | @pilotuser14:demokratiebot.de | 21 | d | a | Action | intervention | KN0483
+2026-01-21 21:15:17 | @pilotuser5:demokratiebot.de | 22 | c | b | Preparation | intervention | EE1164
+2026-01-22 11:19:04 | @pilotuser13:demokratiebot.de | 25 | a | a | Precontemplation | intervention | HN2085
+2026-01-22 15:20:53 | @pilotuser6:demokratiebot.de | 20 | d | a | Action | control | HN2588
+2026-02-02 16:40:56 | @pilotuser22:demokratiebot.de | 29 | e | b | Maintenance | control | EN0156

@@ -1,0 +1,241 @@
+2025-10-11 12:24:00 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | 👍 | OK
+2025-10-13 07:58:50 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | Gut | OK
+2025-10-13 10:07:45 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | Wow | OK
+2025-10-17 09:00:52 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | Hab heute keine Lust | OK
+2025-10-18 10:21:47 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | 🙏🏻 | OK
+2025-10-19 12:51:00 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | Gut | OK
+2025-10-27 09:08:25 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | 👍 | OK
+2025-10-28 09:00:39 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | valenz | 🙂 | OK
+2025-10-28 09:01:46 | 3e4db102-2a69-4030-8075-a673692ded0b | valenz | 🙂 | OK
+2025-10-28 09:02:09 | 68fb7009-6f7f-4140-a85a-9308042ef146 | valenz | 🙂 | OK
+2025-10-28 12:02:26 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | 😊 | OK
+2025-10-29 09:01:34 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | planung | Physiotherapie | OK
+2025-10-29 09:02:42 | 68fb7009-6f7f-4140-a85a-9308042ef146 | planung | Lernen | OK
+2025-10-29 09:02:56 | 3e4db102-2a69-4030-8075-a673692ded0b | planung | Ich möchte eine Vorlesung von gestern nacharbeiten, bei der ich nicht richtig aufgepasst habe | OK
+2025-10-29 09:59:34 | 00d8b3fa-d55d-4b2f-b87a-077c7f12d3b2 | planung | müll raus bringen | OK
+2025-10-29 18:14:01 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | planung | Ich will meine Schuhe sauber machen | OK
+2025-10-30 09:02:07 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-10-30 09:03:51 | 3e4db102-2a69-4030-8075-a673692ded0b | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter | OK
+2025-10-30 09:56:17 | 46e2ba06-7652-4b79-bd35-783513315d71 | quiz | Welches Tier kann nicht rückwärts laufen? | Känguru | OK
+2025-10-30 10:15:06 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 36 | OK
+2025-10-30 11:39:29 | d007989e-59d5-4306-9fa7-2b92d95d050e | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-10-31 09:02:04 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | beobachtung | ich sehe meknen bademantel | OK
+2025-10-31 09:03:01 | d007989e-59d5-4306-9fa7-2b92d95d050e | beobachtung | Fenster | OK
+2025-10-31 09:04:43 | 46e2ba06-7652-4b79-bd35-783513315d71 | beobachtung | Einen Feuerlöscher | OK
+2025-10-31 09:07:02 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | beobachtung | Meine Monsterra Pflanze | OK
+2025-10-31 09:19:55 | 68fb7009-6f7f-4140-a85a-9308042ef146 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-10-31 09:30:43 | 3e4db102-2a69-4030-8075-a673692ded0b | beobachtung | Meine Lieblingspflanze | OK
+2025-10-31 11:29:56 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | beobachtung | Leiter | OK
+2025-10-31 11:32:28 | 00d8b3fa-d55d-4b2f-b87a-077c7f12d3b2 | quiz | Wie viele Kontinente zählt man üblicherweise? | oki | OK
+2025-10-31 12:08:47 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | beobachtung | Stuhl | OK
+2025-10-31 15:37:31 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | beobachtung | Einen Kaffee | OK
+2025-11-01 09:01:29 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | wissen | 👍 | OK
+2025-11-01 09:02:12 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | wissen | 👎 | OK
+2025-11-01 09:04:20 | 3e4db102-2a69-4030-8075-a673692ded0b | wissen | 👎 | OK
+2025-11-01 09:11:07 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | wissen | 👎 | OK
+2025-11-01 09:14:04 | d007989e-59d5-4306-9fa7-2b92d95d050e | wissen | 👍🏻 | OK
+2025-11-01 09:15:21 | 33148360-d730-4e9c-b600-7de93081c1b2 | wissen | 👎 | OK
+2025-11-01 09:19:09 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | 👍 | OK
+2025-11-01 09:40:15 | 46e2ba06-7652-4b79-bd35-783513315d71 | wissen | 👎🏻 | OK
+2025-11-01 11:26:06 | 68fb7009-6f7f-4140-a85a-9308042ef146 | wissen | 👎 | OK
+2025-11-01 12:03:19 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | wissen | 👎 | OK
+2025-11-02 09:00:41 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | 😊 | OK
+2025-11-02 09:01:39 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | valenz | 🙂 | OK
+2025-11-02 09:02:07 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | valenz | 🙂 | OK
+2025-11-02 09:06:59 | 33148360-d730-4e9c-b600-7de93081c1b2 | valenz | 🙂 | OK
+2025-11-02 09:08:30 | 3e4db102-2a69-4030-8075-a673692ded0b | valenz | 🙂 | OK
+2025-11-02 09:16:57 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | valenz | 🙂 | OK
+2025-11-02 09:32:24 | d007989e-59d5-4306-9fa7-2b92d95d050e | valenz | 🙂 | OK
+2025-11-02 10:27:18 | 68fb7009-6f7f-4140-a85a-9308042ef146 | valenz | 🙂 | OK
+2025-11-02 10:29:16 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | valenz | 😐 | OK
+2025-11-02 11:03:32 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | valenz | 😐 | OK
+2025-11-02 12:00:59 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | valenz | 😐 | OK
+2025-11-02 12:07:22 | 46e2ba06-7652-4b79-bd35-783513315d71 | valenz | 😐 | OK
+2025-11-03 09:02:11 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | wissen | 👍 | OK
+2025-11-03 09:02:42 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | wissen | 👍 | OK
+2025-11-03 09:03:52 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | wissen | 👎 | OK
+2025-11-03 09:06:12 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | wissen | 👎 | OK
+2025-11-03 09:07:50 | 3e4db102-2a69-4030-8075-a673692ded0b | wissen | 👎 | OK
+2025-11-03 09:13:03 | 33148360-d730-4e9c-b600-7de93081c1b2 | wissen | 👎 | OK
+2025-11-03 09:13:34 | d007989e-59d5-4306-9fa7-2b92d95d050e | wissen | 👍🏻 | OK
+2025-11-03 09:17:04 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | wissen | 👎 | OK
+2025-11-03 09:29:03 | 46e2ba06-7652-4b79-bd35-783513315d71 | wissen | 👎🏻 | OK
+2025-11-03 09:29:59 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | wissen | 👎 | OK
+2025-11-03 12:00:58 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | wissen | Nee | OK
+2025-11-03 12:22:15 | 68fb7009-6f7f-4140-a85a-9308042ef146 | wissen | 👎 | OK
+2025-11-04 09:01:22 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | valenz | 🙂 | OK
+2025-11-04 09:02:40 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | valenz | 🙂 | OK
+2025-11-04 09:04:38 | d007989e-59d5-4306-9fa7-2b92d95d050e | valenz | 😐 | OK
+2025-11-04 09:04:48 | 3e4db102-2a69-4030-8075-a673692ded0b | valenz | 😐 | OK
+2025-11-04 09:04:52 | 68fb7009-6f7f-4140-a85a-9308042ef146 | valenz | 😐 | OK
+2025-11-04 09:05:02 | 33148360-d730-4e9c-b600-7de93081c1b2 | valenz | 🙂 | OK
+2025-11-04 09:12:32 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | valenz | 😊 | OK
+2025-11-04 09:39:01 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | valenz | 🙂 | OK
+2025-11-04 09:47:07 | 46e2ba06-7652-4b79-bd35-783513315d71 | valenz | 🙂 | OK
+2025-11-04 12:01:56 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | valenz | 🙂 | OK
+2025-11-04 12:25:22 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | valenz | 😐 | OK
+2025-11-05 09:01:47 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | planung | Meinen Vortrag üben | OK
+2025-11-05 09:02:34 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | planung | Meine Statistikhausaufgabe | OK
+2025-11-05 09:03:05 | d007989e-59d5-4306-9fa7-2b92d95d050e | planung | Uni | OK
+2025-11-05 09:03:10 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | valenz | Guten Morgen | OK
+2025-11-05 09:04:37 | 33148360-d730-4e9c-b600-7de93081c1b2 | planung | Joggen gehen. | OK
+2025-11-05 09:04:46 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | planung | Ein vorbestelltes Buch abholen | OK
+2025-11-05 09:05:00 | 3e4db102-2a69-4030-8075-a673692ded0b | planung | Ich gehe zur Sozialpsychologie Vorlesung | OK
+2025-11-05 09:05:54 | caf88c12-f555-47c7-9790-7299392290e9 | planung | Die Arbeit | OK
+2025-11-05 09:06:32 | 68fb7009-6f7f-4140-a85a-9308042ef146 | planung | Sonne genießen | OK
+2025-11-05 09:18:51 | 46e2ba06-7652-4b79-bd35-783513315d71 | planung | Eine Hausaufgabe | OK
+2025-11-05 09:27:01 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | planung | Yoga machen | OK
+2025-11-05 10:04:46 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | planung | Wäsche in den Schrank sortieren | OK
+2025-11-05 11:30:34 | 2e04ec4b-5c54-4ed3-aa05-99f6a64e44cf | planung | Die Studie | OK
+2025-11-05 12:02:38 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | planung | Gespräch mit dem Chef | OK
+2025-11-06 09:03:23 | caf88c12-f555-47c7-9790-7299392290e9 | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-06 09:03:44 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-11-06 09:04:01 | 67bfcf39-479d-4de5-8dbf-b6796c2f5747 | quiz | Wie viele Kontinente zählt man üblicherweise? | 5 | OK
+2025-11-06 09:04:26 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 28 | OK
+2025-11-06 09:05:24 | 448e78e0-3252-421a-8394-921ff517e768 | quiz | Welches Tier kann nicht rückwärts laufen? | känguru | OK
+2025-11-06 09:05:52 | 33148360-d730-4e9c-b600-7de93081c1b2 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 28 | OK
+2025-11-06 09:06:27 | a49f0caa-a4d4-437d-9062-052d785ebafd | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter | OK
+2025-11-06 09:07:15 | 3e4db102-2a69-4030-8075-a673692ded0b | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-06 09:08:24 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter | OK
+2025-11-06 09:09:45 | d007989e-59d5-4306-9fa7-2b92d95d050e | quiz | Welches Tier kann nicht rückwärts laufen? | Känguru | OK
+2025-11-06 09:26:01 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-06 09:40:30 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-06 09:42:36 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-06 10:00:54 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | quiz | Wie viele Kontinente zählt man üblicherweise? | 6 | OK
+2025-11-06 10:04:10 | 46e2ba06-7652-4b79-bd35-783513315d71 | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter? | OK
+2025-11-06 12:00:51 | 68fb7009-6f7f-4140-a85a-9308042ef146 | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-06 12:08:31 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-11-06 17:53:56 | e812a509-d756-4663-ac6c-caccfc970079 | quiz | Welches Tier kann nicht rückwärts laufen? | Känguru | OK
+2025-11-07 09:01:21 | 448e78e0-3252-421a-8394-921ff517e768 | beobachtung | trinkflasche | OK
+2025-11-07 09:02:05 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | beobachtung | meine pflanze | OK
+2025-11-07 09:04:04 | d007989e-59d5-4306-9fa7-2b92d95d050e | beobachtung | Vorhänge | OK
+2025-11-07 09:05:40 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | beobachtung | meine augenbrauen | OK
+2025-11-07 09:06:33 | 46e2ba06-7652-4b79-bd35-783513315d71 | beobachtung | Einen Mülleimer | OK
+2025-11-07 09:07:11 | a49f0caa-a4d4-437d-9062-052d785ebafd | beobachtung | Mio Mio Mate | OK
+2025-11-07 09:07:44 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | beobachtung | Kühlschrank | OK
+2025-11-07 09:10:33 | 33148360-d730-4e9c-b600-7de93081c1b2 | beobachtung | Wasserflasche | OK
+2025-11-07 09:11:30 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | beobachtung | Die Deckenlampe | OK
+2025-11-07 09:16:01 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | beobachtung | Schreibtischlampe | OK
+2025-11-07 09:16:47 | e8258a0c-b707-4ade-8889-015dcd4b9073 | beobachtung | Kopfhörer | OK
+2025-11-07 09:17:03 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | beobachtung | Eine rosane Kerze | OK
+2025-11-07 09:38:54 | caf88c12-f555-47c7-9790-7299392290e9 | beobachtung | Aquarium | OK
+2025-11-07 09:40:14 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | beobachtung | Wasserflasche | OK
+2025-11-07 09:40:32 | d5b0b824-3b61-49c8-945c-52b1c048d162 | beobachtung | ich sehe einen baum | OK
+2025-11-07 09:41:14 | f569d5a5-44c2-4556-82b0-f521313a87d0 | quiz | Wie viele Kontinente zählt man üblicherweise? | 6 | OK
+2025-11-07 10:13:31 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | beobachtung | Blumen | OK
+2025-11-07 10:15:16 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | beobachtung | Lampe | OK
+2025-11-07 12:00:53 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | beobachtung | Kerze | OK
+2025-11-07 14:44:59 | e812a509-d756-4663-ac6c-caccfc970079 | beobachtung | Kissen | OK
+2025-11-08 09:02:01 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | wissen | 👍 | OK
+2025-11-08 09:02:31 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | wissen | 👎 | OK
+2025-11-08 09:04:42 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | wissen | 👎 | OK
+2025-11-08 09:05:00 | e8258a0c-b707-4ade-8889-015dcd4b9073 | wissen | 👎 | OK
+2025-11-08 09:05:55 | 33148360-d730-4e9c-b600-7de93081c1b2 | wissen | 👎 | OK
+2025-11-08 09:07:30 | f569d5a5-44c2-4556-82b0-f521313a87d0 | wissen | 👎🏻 | OK
+2025-11-08 09:12:14 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | wissen | 👍🏻 | OK
+2025-11-08 09:26:04 | d007989e-59d5-4306-9fa7-2b92d95d050e | wissen | 👍🏻 | OK
+2025-11-08 09:35:14 | a49f0caa-a4d4-437d-9062-052d785ebafd | wissen | 👎 | OK
+2025-11-08 09:38:39 | caf88c12-f555-47c7-9790-7299392290e9 | wissen | 👎 | OK
+2025-11-08 09:40:06 | 46e2ba06-7652-4b79-bd35-783513315d71 | wissen | 👍🏻 | OK
+2025-11-08 10:14:41 | e812a509-d756-4663-ac6c-caccfc970079 | wissen | 👎 | OK
+2025-11-08 10:16:57 | 448e78e0-3252-421a-8394-921ff517e768 | wissen | 👎 | OK
+2025-11-08 11:19:06 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | wissen | 👎 | OK
+2025-11-08 11:21:18 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | wissen | 👍 | OK
+2025-11-08 11:29:00 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | wissen | 👎 | OK
+2025-11-08 12:07:06 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | wissen | Nee | OK
+2025-11-08 12:59:34 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | wissen | 👎🏼 | OK
+2025-11-08 14:37:54 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | wissen | 👍🏻 | OK
+2025-11-09 09:03:16 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | valenz | 🙂 | OK
+2025-11-09 09:04:10 | 33148360-d730-4e9c-b600-7de93081c1b2 | valenz | 😕 | OK
+2025-11-09 09:04:24 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | valenz | 😐 | OK
+2025-11-09 09:05:01 | f569d5a5-44c2-4556-82b0-f521313a87d0 | valenz | 😁 | OK
+2025-11-09 09:15:32 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | valenz | 🙂 | OK
+2025-11-09 09:16:50 | 6efbc570-7ccf-4357-940f-b2fb4e03d472 | valenz | 😐 | OK
+2025-11-09 09:43:18 | a49f0caa-a4d4-437d-9062-052d785ebafd | valenz | 🙂 | OK
+2025-11-09 09:44:01 | d5b0b824-3b61-49c8-945c-52b1c048d162 | wissen | 👍 | OK
+2025-11-09 10:05:08 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | valenz | 🙂 | OK
+2025-11-09 10:22:35 | caf88c12-f555-47c7-9790-7299392290e9 | valenz | 🙂 | OK
+2025-11-09 10:33:45 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | valenz | 🙂 | OK
+2025-11-09 10:40:12 | e812a509-d756-4663-ac6c-caccfc970079 | valenz | 🙁 | OK
+2025-11-09 11:59:41 | e8258a0c-b707-4ade-8889-015dcd4b9073 | valenz | 🙂 | OK
+2025-11-09 12:09:14 | 448e78e0-3252-421a-8394-921ff517e768 | valenz | 🙂 | OK
+2025-11-09 12:21:31 | 1ed1a836-e70f-45d7-a5fe-6fe6dd78e673 | valenz | 🙂 | OK
+2025-11-09 12:21:59 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | valenz | 🙂 | OK
+2025-11-09 12:34:02 | e8fed64b-9d3c-4fb2-974f-57e48e089fa3 | valenz | Schlecht | OK
+2025-11-09 21:16:45 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | valenz | 😐 | OK
+2025-11-10 09:00:54 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | wissen | 👎 | OK
+2025-11-10 09:03:00 | e8258a0c-b707-4ade-8889-015dcd4b9073 | wissen | 👎 | OK
+2025-11-10 09:03:15 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | wissen | 👍🏻 | OK
+2025-11-10 09:06:03 | d5b0b824-3b61-49c8-945c-52b1c048d162 | wissen | 👎 | OK
+2025-11-10 09:07:38 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | wissen | 👎 | OK
+2025-11-10 09:09:17 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | wissen | 👎 | OK
+2025-11-10 09:13:42 | f569d5a5-44c2-4556-82b0-f521313a87d0 | wissen | 👍🏻 | OK
+2025-11-10 09:15:53 | a49f0caa-a4d4-437d-9062-052d785ebafd | wissen | 👍 | OK
+2025-11-10 09:20:58 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | wissen | 👍 | OK
+2025-11-10 09:33:38 | 448e78e0-3252-421a-8394-921ff517e768 | wissen | 👎 | OK
+2025-11-10 09:58:15 | caf88c12-f555-47c7-9790-7299392290e9 | wissen | 👎 | OK
+2025-11-10 09:59:41 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | wissen | 👍🏻 | OK
+2025-11-10 10:06:25 | e812a509-d756-4663-ac6c-caccfc970079 | wissen | 👎 | OK
+2025-11-10 13:02:06 | 33148360-d730-4e9c-b600-7de93081c1b2 | wissen | 👎 | OK
+2025-11-10 14:01:29 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | wissen | 👍 | OK
+2025-11-11 09:03:13 | 448e78e0-3252-421a-8394-921ff517e768 | valenz | 🙂 | OK
+2025-11-11 09:09:59 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | valenz | 🙂 | OK
+2025-11-11 09:10:28 | d5b0b824-3b61-49c8-945c-52b1c048d162 | valenz | 😐 | OK
+2025-11-11 09:19:10 | a49f0caa-a4d4-437d-9062-052d785ebafd | valenz | 🙂 | OK
+2025-11-11 09:19:42 | e1b919ee-6ceb-45b0-8527-29f1916eb827 | valenz | 🙂 | OK
+2025-11-11 09:23:12 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | valenz | 🙂 | OK
+2025-11-11 09:26:02 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | valenz | 😐 | OK
+2025-11-11 09:37:17 | f569d5a5-44c2-4556-82b0-f521313a87d0 | valenz | 😐 | OK
+2025-11-11 09:58:10 | caf88c12-f555-47c7-9790-7299392290e9 | valenz | 😐 | OK
+2025-11-11 10:00:01 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | valenz | 🙂 | OK
+2025-11-11 10:23:37 | e812a509-d756-4663-ac6c-caccfc970079 | valenz | 🙂 | OK
+2025-11-11 10:27:12 | 24ee1a49-50f8-4cc6-9fd8-2f195a3d203c | valenz | 😐 | OK
+2025-11-12 09:04:19 | a49f0caa-a4d4-437d-9062-052d785ebafd | planung | Viel Uni machen | OK
+2025-11-12 09:07:21 | caf88c12-f555-47c7-9790-7299392290e9 | planung | Aufräumen | OK
+2025-11-12 09:09:16 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | planung | Zimmeraufräumen | OK
+2025-11-12 09:12:23 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | planung | Wäsche waschen | OK
+2025-11-12 09:22:25 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | valenz | 🙂 | OK
+2025-11-12 09:22:36 | d5b0b824-3b61-49c8-945c-52b1c048d162 | planung | arbeiten | OK
+2025-11-12 09:56:18 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | planung | Staubsaugen | OK
+2025-11-12 10:02:03 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | planung | Kapitel 6 lesen | OK
+2025-11-12 10:13:05 | 448e78e0-3252-421a-8394-921ff517e768 | planung | zur uni fahren | OK
+2025-11-12 11:58:03 | e8258a0c-b707-4ade-8889-015dcd4b9073 | valenz | Was ist die Reflexionsübung? | OK
+2025-11-12 20:27:36 | e812a509-d756-4663-ac6c-caccfc970079 | planung | Univorlesung nach holen | OK
+2025-11-13 07:23:00 | f569d5a5-44c2-4556-82b0-f521313a87d0 | planung | Sport | OK
+2025-11-13 09:01:36 | f569d5a5-44c2-4556-82b0-f521313a87d0 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-11-13 09:01:40 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-13 09:09:43 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | quiz | Wie viele Kontinente zählt man üblicherweise? | 6 | OK
+2025-11-13 09:19:03 | d5b0b824-3b61-49c8-945c-52b1c048d162 | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-13 09:28:02 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-13 09:29:21 | caf88c12-f555-47c7-9790-7299392290e9 | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-13 09:34:35 | a49f0caa-a4d4-437d-9062-052d785ebafd | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter | OK
+2025-11-13 10:01:13 | 448e78e0-3252-421a-8394-921ff517e768 | quiz | In welchem Jahr fiel die Berliner Mauer? | 1989 | OK
+2025-11-13 10:02:53 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-11-13 10:49:51 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | quiz | Wie viele Zähne hat ein erwachsener Mensch normalerweise? | 32 | OK
+2025-11-13 12:46:10 | e8258a0c-b707-4ade-8889-015dcd4b9073 | quiz | Wie viele Kontinente zählt man üblicherweise? | 7 | OK
+2025-11-13 12:59:06 | e812a509-d756-4663-ac6c-caccfc970079 | quiz | Welches ist der größte Planet in unserem Sonnensystem? | Jupiter | OK
+2025-11-14 09:01:11 | 448e78e0-3252-421a-8394-921ff517e768 | beobachtung | ICE | OK
+2025-11-14 09:01:58 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | beobachtung | Sofa | OK
+2025-11-14 09:13:40 | fd36f3f5-85a4-4f65-8a60-ade69e4f511e | beobachtung | Schreibtisch | OK
+2025-11-14 09:14:25 | a49f0caa-a4d4-437d-9062-052d785ebafd | beobachtung | Einen grünen quadratischen Magneten am Kühlschrank auf dem ein irischer Segensspruch steht | OK
+2025-11-14 09:14:41 | caf88c12-f555-47c7-9790-7299392290e9 | beobachtung | Zimmerpflanze | OK
+2025-11-14 09:19:25 | f569d5a5-44c2-4556-82b0-f521313a87d0 | beobachtung | Bananen | OK
+2025-11-14 09:47:32 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | beobachtung | Pc | OK
+2025-11-14 09:57:21 | e8258a0c-b707-4ade-8889-015dcd4b9073 | beobachtung | Ein Baum | OK
+2025-11-14 10:53:59 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | beobachtung | Stuhl | OK
+2025-11-14 10:59:52 | d5b0b824-3b61-49c8-945c-52b1c048d162 | beobachtung | plakat | OK
+2025-11-14 23:44:02 | e812a509-d756-4663-ac6c-caccfc970079 | beobachtung | Bügeleisen | OK
+2025-11-15 09:02:09 | f569d5a5-44c2-4556-82b0-f521313a87d0 | wissen | 👍🏻 | OK
+2025-11-15 09:04:30 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | wissen | 👎 | OK
+2025-11-15 09:19:04 | 4bc6e1f4-58a8-45c8-96cd-3da19835f7c6 | beobachtung | Lippem | OK
+2025-11-15 09:33:56 | a49f0caa-a4d4-437d-9062-052d785ebafd | wissen | 👍 | OK
+2025-11-15 09:48:41 | 8b28dec0-1cf6-4761-867b-abfb275bbdcb | wissen | 👎 | OK
+2025-11-15 09:55:08 | e8258a0c-b707-4ade-8889-015dcd4b9073 | wissen | 👍 | OK
+2025-11-15 09:55:33 | d5b0b824-3b61-49c8-945c-52b1c048d162 | wissen | nein | OK
+2025-11-15 11:32:50 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | wissen | 👍🏼 | OK
+2025-11-15 11:44:29 | 448e78e0-3252-421a-8394-921ff517e768 | wissen | 👎 | OK
+2025-11-15 14:40:00 | e812a509-d756-4663-ac6c-caccfc970079 | wissen | 👎 | OK
+2025-11-16 09:04:56 | d5b0b824-3b61-49c8-945c-52b1c048d162 | valenz | 😐 | OK
+2025-11-16 09:51:12 | 2f954834-1ac2-49e3-8096-6269bb8ac850 | valenz | 🙂 | OK
+2025-11-16 10:25:54 | e1493ad2-b665-4f4a-8fd3-6a4135c7f09b | valenz | 😐 | OK
+2025-11-16 17:24:41 | e8258a0c-b707-4ade-8889-015dcd4b9073 | valenz | 🙂 | OK
