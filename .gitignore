@@ -35,3 +35,4 @@ backup_*.tar.gz
 sign_device*.py
 signature_payload.json
 *.backup*
+data/
