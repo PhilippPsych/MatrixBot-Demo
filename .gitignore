@@ -1,5 +1,6 @@
 # Secrets & Credentials
 .env
+.env.staging
 *.pem
 *.key
 *.secret

@@ -36,7 +36,7 @@ class AIPrecontemplationHandler:
     3. Pro/Contra abschließen + Zusammenfassung
     """
     
-    MAX_INTERACTIONS = 3  # Harte Grenze
+    MAX_INTERACTIONS = 5  # Harte Grenze
     
     def __init__(self, bot_instance, study_manager=None):
         self.bot = bot_instance
@@ -79,6 +79,8 @@ class AIPrecontemplationHandler:
             "interaction_count": 0,  # Wie oft hat User geantwortet
             "start_time": datetime.now().isoformat(),
             "conversation": [],
+            "opening_snippet": opening,
+            "style_note": "",
             "data": {
                 "problem": None,
                 "emotions": None,
@@ -124,19 +126,23 @@ class AIPrecontemplationHandler:
                 # Weitermachen (nur wenn nicht am Limit)
                 self.bot.send_message(phone_number, self._clean_message(ai_decision["message"]))
                 self._add_to_conversation(phone_number, "assistant", ai_decision["message"])
-                
+
                 # Update Schritt wenn AI es vorschlägt
                 if "next_step" in ai_decision:
                     session["step"] = ai_decision["next_step"]
-                
+                if ai_decision.get("style_note"):
+                    session["style_note"] = ai_decision["style_note"]
+
             elif ai_decision["action"] == "need_help":
                 # User braucht Hilfe - biete konkretes Beispiel
                 help_message = self._ai_generate_help(phone_number, session)
                 self.bot.send_message(phone_number, self._clean_message(help_message))
                 self._add_to_conversation(phone_number, "assistant", help_message)
-                
+
             elif ai_decision["action"] == "complete":
                 # Vorzeitiger Abschluss (z.B. User hat alles gut beantwortet)
+                if ai_decision.get("style_note"):
+                    session["style_note"] = ai_decision["style_note"]
                 self._complete_intervention(phone_number, ai_decision)
             
             return True
@@ -158,6 +164,10 @@ USER-PROFIL:
 - Level: {user_state.level}
 - Punkte: {user_state.engagement_points}
 - Phase: Precontemplation (noch kein Bewusstsein)
+
+BISHERIGE INTERVENTIONS-HISTORY:
+{user_state.get_history_summary()}
+→ Wähle ein Einstiegsthema, das noch nicht verwendet wurde.
 
 TECHNIKEN:
 - Motivational Interviewing: Validierung, Empathie, offene Fragen
@@ -231,11 +241,21 @@ USER: "{text}"
 - Wenn zu vage → CONTINUE mit konkreter Nachfrage
 
 **Interaktion 2 (gerade passiert):**
+- Wenn Problem + Emotion vollständig → CONTINUE zu Schritt 4 (Lösung)
+- Wenn Emotion fehlt → CONTINUE: Gefühl nachfragen
+- Wenn kein Problem → NEED_HELP (Beispiel anbieten)
+
+**Interaktion 3 (gerade passiert):**
 - Wenn Lösung genannt → CONTINUE zu Schritt 5 (Pro-Konsequenzen)
 - Wenn keine Lösung → NEED_HELP (Lösungsideen mit Wahlmöglichkeiten)
 - User MUSS spätestens jetzt eine Lösung haben!
 
-**Interaktion 3 (LETZTE - gerade passiert):**
+**Interaktion 4 (gerade passiert):**
+- Wenn Pro-Konsequenz vorhanden → CONTINUE zu Schritt 6 (Contra)
+- Wenn keine Konsequenz → CONTINUE: Konsequenz konkret nachfragen
+- Bleibe im Gesprächsfluss, kein Abschluss!
+
+**Interaktion 5 (LETZTE - gerade passiert):**
 - IMMER COMPLETE - egal was User sagt
 - Sammle was gesagt wurde und schließe ab
 
@@ -276,6 +296,15 @@ Schritt 4→5 (Lösung→Pro):
 Schritt 5→6 (Pro→Contra):
 "Klingt gut! Aber mal ehrlich: Was könnte schwierig werden dabei - zu teuer, zu aufwendig, oder würden manche dagegen sein?"
 
+VARIANZ-HINWEIS:
+{UserState.load(phone_number).get_history_summary()}
+→ Formuliere Validierung und Fragen anders als in den obigen Einstiegen.
+→ Variiere: Satzstruktur, Beispiele, Fragestil (offen/Auswahl/hypothetisch).
+
+PASSUNG VOR STRUKTUR:
+Wenn der User etwas Persönliches oder Unerwartetes teilt, gehe darauf ein –
+auch wenn das die 6-Schritt-Struktur unterbricht. Authentizität schlägt Plan.
+
 WICHTIG:
 - NIEMALS "Schule/Studium/Klasse" - stattdessen: "beim Lernen", "im Alltag", "in Gruppen"
 - Max 2 Sätze (Validierung + Frage)
@@ -290,6 +319,7 @@ ANTWORT (JSON):
     "next_step": 1-6,
     "data_update": {{"problem": "...", "emotions": "...", "solution": "...", "consequence_pro": "...", "consequence_contra": "..."}},
     "points": 1-3,
+    "style_note": "Kurze Beschreibung deines Stils (z.B. 'humorvoll', 'direkt-fragend', 'empathisch-erzählend')",
     "reasoning": "Kurze Begründung"
 }}
 """
@@ -396,13 +426,23 @@ Antworte NUR mit der Nachricht, kein JSON."""
         
         # Points vergeben
         points = self._calculate_points(session)
-        
+
         user_state = UserState.load(phone_number)
         user_state.add_engagement_points(points, self.bot)
-        
+
+        # History-Eintrag
+        user_state.add_intervention_to_history(
+            day=user_state.last_evaluation_day,
+            phase="Precontemplation",
+            type="6-Schritt-Reflexion",
+            topic=session["data"].get("problem", "unbekannt")[:60],
+            opening_snippet=session.get("opening_snippet", ""),
+            style_note=session.get("style_note", "")
+        )
+
         # Daten speichern
         self._save_session_data(phone_number, session, points, summary)
-        
+
         if self.study_manager:
             pass  # advance_day disabled - day advances by real time only
 
@@ -421,13 +461,23 @@ Antworte NUR mit der Nachricht, kein JSON."""
         # Points vergeben
         points = ai_decision.get("points", 2)
         points = self._calculate_points(session, base_points=points)
-        
+
         user_state = UserState.load(phone_number)
         user_state.add_engagement_points(points, self.bot)
-        
+
+        # History-Eintrag
+        user_state.add_intervention_to_history(
+            day=user_state.last_evaluation_day,
+            phase="Precontemplation",
+            type="6-Schritt-Reflexion",
+            topic=session["data"].get("problem", "unbekannt")[:60],
+            opening_snippet=session.get("opening_snippet", ""),
+            style_note=session.get("style_note", "")
+        )
+
         # Daten speichern
         self._save_session_data(phone_number, session, points, summary)
-        
+
         if self.study_manager:
             pass  # advance_day disabled - day advances by real time only
 
@@ -603,34 +653,42 @@ Antworte NUR mit der Zusammenfassung, kein JSON."""
 # ===== USAGE EXAMPLE =====
 
 if __name__ == "__main__":
-    """Test mit max 3 Interaktionen"""
-    
+    """Test mit max 5 Interaktionen"""
+
     class MockBot:
         def send_message(self, recipient, message):
             print(f"\n📱 → {recipient[:20]}...")
             print(f"💬 {message}\n")
-    
+
     handler = AIPrecontemplationHandler(MockBot())
     test_user = "+491234567890"
-    
+
     print("=" * 70)
-    print("TEST: Precontemplation Handler v2.1 (IMPROVED - ALWAYS QUESTION)")
+    print("TEST: Precontemplation Handler v2.2 (5 Interaktionen)")
     print("=" * 70)
-    
+
     # Start
     print("\n1️⃣ ELLA startet Intervention...")
     handler.start_intervention(test_user)
-    
+
     # Interaktion 1
-    print("\n2️⃣ USER Interaktion 1/3: Problem nennen")
+    print("\n2️⃣ USER Interaktion 1/5: Problem nennen")
     handler.handle_message(test_user, "Mich nervt, dass im Park überall Müll rumliegt")
-    
+
     # Interaktion 2
-    print("\n3️⃣ USER Interaktion 2/3: Lösung nennen")
+    print("\n3️⃣ USER Interaktion 2/5: Emotion")
+    handler.handle_message(test_user, "Das macht mich echt traurig und wütend")
+
+    # Interaktion 3
+    print("\n4️⃣ USER Interaktion 3/5: Lösung")
     handler.handle_message(test_user, "Mehr Mülleimer aufstellen würde helfen")
-    
-    # Interaktion 3 - LETZTE, wird abschließen
-    print("\n4️⃣ USER Interaktion 3/3: Konsequenz (FINALE)")
-    handler.handle_message(test_user, "Es wäre sauberer, aber kostet Geld")
-    
-    print("\n✅ Test complete - genau 3 Interaktionen!")
+
+    # Interaktion 4
+    print("\n5️⃣ USER Interaktion 4/5: Pro-Konsequenz")
+    handler.handle_message(test_user, "Es wäre sofort sauberer und schöner")
+
+    # Interaktion 5 - LETZTE, wird abschließen
+    print("\n6️⃣ USER Interaktion 5/5: Contra (FINALE)")
+    handler.handle_message(test_user, "Aber das kostet Geld und manche werfen trotzdem Müll hin")
+
+    print("\n✅ Test complete - genau 5 Interaktionen!")

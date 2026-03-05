@@ -68,6 +68,8 @@ class AIPhaseHandler:
                 "step": 1,
                 "max_steps": intervention.get("suggested_steps", 3),
                 "user_context": intervention.get("context", {}),
+                "opening_snippet": intervention.get("opening_message", ""),
+                "style_note": "",
                 "user_state_snapshot": {
                     "level": user_state.level,
                     "points": user_state.engagement_points,
@@ -102,8 +104,12 @@ class AIPhaseHandler:
                 self.bot.send_message(phone_number, ai_decision["message"])
                 self._add_to_conversation(phone_number, "assistant", ai_decision["message"])
                 session["step"] += 1
-                
+                if ai_decision.get("style_note"):
+                    session["style_note"] = ai_decision["style_note"]
+
             elif ai_decision["action"] == "complete":
+                if ai_decision.get("style_note"):
+                    session["style_note"] = ai_decision["style_note"]
                 self._complete_intervention(phone_number, ai_decision)
                 
             elif ai_decision["action"] == "need_help":
@@ -141,6 +147,10 @@ USER-PROFIL:
 - Level: {user_state.level}
 - Punkte: {user_state.engagement_points}
 - Bisherige Interventionen: {user_state.total_interventions}
+
+BISHERIGE INTERVENTIONS-HISTORY:
+{user_state.get_history_summary()}
+→ Wähle einen Typ, der noch NICHT oder selten verwendet wurde.
 
 VERFÜGBARE INTERVENTIONS-TYPEN:
 {types_description}
@@ -211,6 +221,15 @@ ENTSCHEIDUNGSLOGIK:
    - User ist blockiert oder unsicher
    - Beispiel oder Unterstützung nötig
 
+VARIANZ-HINWEIS:
+{UserState.load(phone_number).get_history_summary()}
+→ Formuliere Validierung und Fragen anders als in den obigen Einstiegen.
+→ Variiere: Satzstruktur, Beispiele, Fragestil (offen/Auswahl/hypothetisch).
+
+PASSUNG VOR STRUKTUR:
+Wenn der User etwas Unerwartetes oder Persönliches teilt, gehe darauf ein –
+auch wenn das vom geplanten Schritt abweicht. Authentizität schlägt Struktur.
+
 WICHTIG:
 - Baue auf User-Antwort auf
 - Konkrete Fragen mit Beispielen
@@ -223,6 +242,7 @@ ANTWORT (JSON):
     "message": "Deine Nachricht (nur bei continue/need_help)",
     "points": 1-3,
     "completion_summary": "Kurze Zusammenfassung (nur bei complete)",
+    "style_note": "Kurze Beschreibung deines Stils in dieser Intervention (z.B. 'humorvoll', 'direkt-fragend', 'empathisch-erzählend')",
     "reasoning": "Warum diese Entscheidung?"
 }}
 """
@@ -273,7 +293,17 @@ Gib ein konkretes Beispiel oder Unterstützung (1-2 Sätze, jugendgerecht).
             points = ai_decision.get("points", 1)
             user_state = UserState.load(phone_number)
             user_state.add_engagement_points(points, self.bot)
-            
+
+            # History-Eintrag
+            user_state.add_intervention_to_history(
+                day=user_state.last_evaluation_day,
+                phase=self.phase_name,
+                type=session["type"],
+                topic=session.get("user_context", {}).get("topic", session["type"]),
+                opening_snippet=session.get("opening_snippet", ""),
+                style_note=session.get("style_note", "")
+            )
+
             # AI-generierte Abschlussnachricht
             closing = self._ai_generate_closing(phone_number, session)
             self.bot.send_message(phone_number, closing)

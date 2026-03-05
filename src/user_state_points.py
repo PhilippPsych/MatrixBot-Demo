@@ -6,8 +6,8 @@ Enhanced UserState with Engagement Points System
 
 import json
 import os
-from dataclasses import dataclass, asdict
-from typing import Optional
+from dataclasses import dataclass, asdict, field
+from typing import Optional, List, Dict
 import logging
 
 logger = logging.getLogger(__name__)
@@ -28,7 +28,8 @@ class UserState:
     last_intervention_date: Optional[str] = None
     level: int = 1
     reevaluation_count: int = 0
-    
+    intervention_history: List[Dict] = field(default_factory=list)
+
     def save(self):
         """Save state to file with thread safety"""
         file_path = f"../data/user_states/{self.user_id}.json"
@@ -106,6 +107,35 @@ class UserState:
         self.pending_reevaluation = False
         self.save()
     
+    def add_intervention_to_history(self, day: int, phase: str, type: str, topic: str,
+                                     opening_snippet: str = "", style_note: str = ""):
+        """Fügt abgeschlossene Intervention zur History hinzu"""
+        from datetime import date
+        self.intervention_history.append({
+            "date": date.today().isoformat(),
+            "day": day,
+            "phase": phase,
+            "type": type,
+            "topic": topic,
+            "opening_snippet": opening_snippet[:100] if opening_snippet else "",
+            "style_note": style_note
+        })
+        self.save()
+
+    def get_history_summary(self) -> str:
+        """Gibt lesbare Zusammenfassung der letzten Interventionen zurück"""
+        if not self.intervention_history:
+            return "Noch keine Interventionen."
+        lines = []
+        for e in self.intervention_history[-5:]:
+            line = f"Tag {e['day']}: {e['type']} ({e['phase']}) – Thema: {e['topic']}"
+            if e.get("opening_snippet"):
+                line += f"\n  → Einstieg war: \"{e['opening_snippet']}...\""
+            if e.get("style_note"):
+                line += f"\n  → Stil: {e['style_note']}"
+            lines.append(line)
+        return "\n".join(lines)
+
     def get_progress_message(self) -> str:
         """Get user's progress overview"""
         points_to_next = 10 - (self.engagement_points % 10)
