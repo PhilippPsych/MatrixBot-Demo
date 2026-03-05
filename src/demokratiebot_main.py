@@ -711,7 +711,17 @@ class OnboardingManager:
             f"• Jede Übung gibt Punkte\n"
             f"• Die Studie läuft 10 Tage\n\n"
             f"Die erste Übung kommt morgen früh.\n\n"
-            f"Nutze **help** um alle Befehle zu sehen."
+            f"Nutze help um alle Befehle zu sehen.",
+            formatted_body=(
+                f"Perfekt! Dein Code '{id_code}' wurde gespeichert.<br><br>"
+                f"Du wurdest der Gruppe '{group}' zugeordnet.<br><br>"
+                f"Wie es funktioniert:<br>"
+                f"• Jeden Morgen um {MORNING_INTERVENTION_TIME} Uhr erhältst du eine kurze Übung<br>"
+                f"• Jede Übung gibt Punkte<br>"
+                f"• Die Studie läuft 10 Tage<br><br>"
+                f"Die erste Übung kommt morgen früh.<br><br>"
+                f"Nutze <strong>help</strong> um alle Befehle zu sehen."
+            )
         )
         
         return True
@@ -910,7 +920,15 @@ class EllaChatBot:
                 f"Gruppe: {group}\n"
                 f"Level: {user_state.level} | Punkte: {user_state.engagement_points}\n\n"
                 f"Die nächste Übung kommt um {MORNING_INTERVENTION_TIME} Uhr.\n\n"
-                f"Nutze **progress** für Details oder **help** für alle Befehle."
+                f"Nutze progress für Details oder help für alle Befehle.",
+                formatted_body=(
+                    f"Willkommen zurück bei Ella!<br><br>"
+                    f"Studientag: {study_day}/10<br>"
+                    f"Gruppe: {group}<br>"
+                    f"Level: {user_state.level} | Punkte: {user_state.engagement_points}<br><br>"
+                    f"Die nächste Übung kommt um {MORNING_INTERVENTION_TIME} Uhr.<br><br>"
+                    f"Nutze <strong>progress</strong> für Details oder <strong>help</strong> für alle Befehle."
+                )
             )
         else:
             self.subscription_manager.add_subscriber(phone_number)
@@ -953,11 +971,11 @@ class EllaChatBot:
         help_text = """Ella-Bot Hilfe
 
 Verfügbare Befehle:
-• **start** - Registrierung und Einstieg
-• **stop** - Bot beenden
-• **progress** - Zeigt deinen Fortschritt
-• **help** - Diese Hilfe
-• **info** - Infos über Ella
+• start - Registrierung und Einstieg
+• stop - Bot beenden
+• progress - Zeigt deinen Fortschritt
+• help - Diese Hilfe
+• info - Infos über Ella
 
 10-Tage-Studie:
 • Jeden Morgen um 9:00 Uhr gibt es eine Übung
@@ -968,11 +986,38 @@ Punktesystem:
 • 1 Punkt pro Übung
 • 2 Punkte für ausführliche Antworten
 • Alle 10 Punkte: Re-Evaluation"""
-        
+
+        help_html = (
+            "Ella-Bot Hilfe<br><br>"
+            "Verfügbare Befehle:<br>"
+            "• <strong>start</strong> - Registrierung und Einstieg<br>"
+            "• <strong>stop</strong> - Bot beenden<br>"
+            "• <strong>progress</strong> - Zeigt deinen Fortschritt<br>"
+            "• <strong>help</strong> - Diese Hilfe<br>"
+            "• <strong>info</strong> - Infos über Ella<br><br>"
+            "10-Tage-Studie:<br>"
+            "• Jeden Morgen um 9:00 Uhr gibt es eine Übung<br>"
+            "• Sammle Punkte durch Teilnahme<br>"
+            "• Nach 10 Tagen: Abschlussbefragung<br><br>"
+            "Punktesystem:<br>"
+            "• 1 Punkt pro Übung<br>"
+            "• 2 Punkte für ausführliche Antworten<br>"
+            "• Alle 10 Punkte: Re-Evaluation"
+        )
+
         if TEST_MODE:
-            help_text += "\n\nTEST-MODUS:\n• **debug** - System-Status\n• **mygroup** - Aktuelle Gruppe\n• **trigger_intervention** - Intervention starten\n• **advance_day** - Tag vorrücken\n• **trigger_reevaluation** - Re-Evaluation\n• **reset** - Account zurücksetzen"
-        
-        self.bot.send_message(phone_number, help_text)
+            help_text += "\n\nTEST-MODUS:\n• debug - System-Status\n• mygroup - Aktuelle Gruppe\n• trigger_intervention - Intervention starten\n• advance_day - Tag vorrücken\n• trigger_reevaluation - Re-Evaluation\n• reset - Account zurücksetzen"
+            help_html += (
+                "<br><br>TEST-MODUS:<br>"
+                "• <strong>debug</strong> - System-Status<br>"
+                "• <strong>mygroup</strong> - Aktuelle Gruppe<br>"
+                "• <strong>trigger_intervention</strong> - Intervention starten<br>"
+                "• <strong>advance_day</strong> - Tag vorrücken<br>"
+                "• <strong>trigger_reevaluation</strong> - Re-Evaluation<br>"
+                "• <strong>reset</strong> - Account zurücksetzen"
+            )
+
+        self.bot.send_message(phone_number, help_text, formatted_body=help_html)
     
     def handle_info(self, message: MatrixMessage):
         """Handle /info"""
@@ -1213,7 +1258,11 @@ Test-Modus: Aktiv"""
             self.bot.send_message(
                 phone_number,
                 "🔄 Dein Account wurde zurückgesetzt!\n\n"
-                "Schreibe **start** um neu zu beginnen."
+                "Schreibe start um neu zu beginnen.",
+                formatted_body=(
+                    "🔄 Dein Account wurde zurückgesetzt!<br><br>"
+                    "Schreibe <strong>start</strong> um neu zu beginnen."
+                )
             )
             
             logger.info(f"User {phone_number} successfully reset")
@@ -1411,7 +1460,12 @@ Studienleitung: jakob.fink-lamotte@uni-potsdam.de"""
                 # Send greeting with study day
                 self.bot.send_message(
                     phone_number,
-                    f"Guten Morgen!\n\nTag {study_day}/10 - Zeit für deine heutige Reflexionsübung.\n\nSchreibe **bereit** um die Übung zu starten."
+                    f"Guten Morgen!\n\nTag {study_day}/10 - Zeit für deine heutige Reflexionsübung.\n\nSchreibe bereit um die Übung zu starten.",
+                    formatted_body=(
+                        f"Guten Morgen!<br><br>"
+                        f"Tag {study_day}/10 - Zeit für deine heutige Reflexionsübung.<br><br>"
+                        f"Schreibe <strong>bereit</strong> um die Übung zu starten."
+                    )
                 )
                 time.sleep(2)
                 
