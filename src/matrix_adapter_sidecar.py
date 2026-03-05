@@ -46,8 +46,10 @@ class MatrixAdapter:
     def add_handler(self, event_type: str, handler: Callable):
         self.handlers[event_type] = handler
 
-    def send_message(self, recipient: str, message: str) -> bool:
+    def send_message(self, recipient: str, message: str, formatted_body: Optional[str] = None) -> bool:
         payload = {"recipient": recipient, "message": message}
+        if formatted_body is not None:
+            payload["formatted_body"] = formatted_body
         try:
             response = requests.post(
                 f"{self.sidecar_url}/send",

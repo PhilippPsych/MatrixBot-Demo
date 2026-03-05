@@ -1293,7 +1293,11 @@ Test-Modus: Aktiv"""
             return
         
         # Default
-        self.bot.send_message(phone_number, "Hi! Ich bin Ella.\n\nSchreibe **start** um zu beginnen oder **help** für Hilfe.")
+        self.bot.send_message(
+            phone_number,
+            "Hi! Ich bin Ella.\n\nSchreibe start um zu beginnen oder help für Hilfe.",
+            formatted_body="Hi! Ich bin Ella.<br><br>Schreibe <strong>start</strong> um zu beginnen oder <strong>help</strong> für Hilfe."
+        )
 
     
     def _is_crisis_message(self, text: str) -> bool:

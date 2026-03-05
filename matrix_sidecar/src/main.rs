@@ -145,6 +145,7 @@ struct SendRequest {
     #[serde(alias = "user_id")]
     recipient: String,
     message: String,
+    formatted_body: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -502,7 +503,10 @@ async fn send_inner(state: &AppState, payload: SendRequest) -> Result<SendRespon
 
     let room = ensure_dm_room(state, &recipient).await?;
 
-    let content = RoomMessageEventContent::text_plain(payload.message);
+    let content = match payload.formatted_body {
+        Some(html) => RoomMessageEventContent::text_html(payload.message, html),
+        None => RoomMessageEventContent::text_plain(payload.message),
+    };
     let response = room.send(content).await.context("room_send failed")?;
 
     Ok(SendResponse {
