@@ -429,11 +429,14 @@ ANFORDERUNGEN:
             if not response:
                 logger.warning(f"Empty response in _parse_json for {self.phase_name}")
                 return fallback
-            
+
             if "{" in response and "}" in response:
                 start = response.index("{")
                 end = response.rindex("}") + 1
                 json_str = response[start:end]
+                # Robustness: trailing commas entfernen (Mistral-Eigenheit)
+                import re
+                json_str = re.sub(r',\s*([}\]])', r'\1', json_str)
                 parsed = json.loads(json_str)
                 
                 # Validiere dass wichtige Felder vorhanden sind

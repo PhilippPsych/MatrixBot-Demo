@@ -603,6 +603,9 @@ Antworte NUR mit der Zusammenfassung, kein JSON."""
                 start = response.index("{")
                 end = response.rindex("}") + 1
                 json_str = response[start:end]
+                # Robustness: trailing commas entfernen (Mistral-Eigenheit)
+                import re
+                json_str = re.sub(r',\s*([}\]])', r'\1', json_str)
                 return json.loads(json_str)
         except Exception as e:
             logger.warning(f"JSON parse failed in Precontemplation: {e}")
