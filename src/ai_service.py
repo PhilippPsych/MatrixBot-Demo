@@ -19,29 +19,42 @@ load_dotenv()
 
 class AIService:
     def __init__(self):
-        # OpenAI Setup from environment variables
-        self.api_key = os.getenv("OPENAI_API_KEY")
-        
-        if not self.api_key:
-            logger.error("OPENAI_API_KEY not set in environment")
-            raise ValueError("OpenAI API key required")
-            
-        self.client = OpenAI(
-            api_key=self.api_key,
-        )
-    
+        self.provider = os.getenv("LLM_PROVIDER", "openai").lower()
+
+        if self.provider == "mistral":
+            self.api_key = os.getenv("MISTRAL_API_KEY")
+            if not self.api_key:
+                logger.error("MISTRAL_API_KEY not set in environment")
+                raise ValueError("Mistral API key required")
+            self.model = "mistral-large-latest"
+            self.client = OpenAI(
+                api_key=self.api_key,
+                base_url="https://api.mistral.ai/v1",
+            )
+        else:
+            self.api_key = os.getenv("OPENAI_API_KEY")
+            if not self.api_key:
+                logger.error("OPENAI_API_KEY not set in environment")
+                raise ValueError("OpenAI API key required")
+            self.model = "gpt-4o"
+            self.client = OpenAI(
+                api_key=self.api_key,
+            )
+
+        logger.info(f"AIService initialized with provider={self.provider}, model={self.model}")
+
     def _make_request(self, prompt: str, max_tokens: int = 150, temperature: float = 0.7) -> str:
         """Zentrale Methode für API-Anfragen"""
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4o",  # oder "gpt-4o-mini" für günstiger
+                model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=max_tokens,
                 temperature=temperature,
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
-            logger.error(f"AI Service error: {e}")
+            logger.error(f"AI Service error ({self.provider}): {e}")
             return "Es tut mir leid, ich kann momentan keine Antwort generieren."
     
     def validate_problem(self, text: str) -> str:
