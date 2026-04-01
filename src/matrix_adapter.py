@@ -212,9 +212,10 @@ class MatrixAdapter:
         
         try:
             self.loop.run_until_complete(self._async_sync_loop())
-        except Exception as e:
-            logger.error(f"Sync loop error: {e}")
+        except BaseException as e:
+            logger.error(f"Sync loop CRASHED: {type(e).__name__}: {e}")
         finally:
+            logger.error("Sync thread exiting! This should not happen.")
             self.loop.close()
     
     async def _async_sync_loop(self):
@@ -237,8 +238,12 @@ class MatrixAdapter:
         logger.info("Skipping initial sync, starting live sync loop...")
         
         # Continuous Sync Loop
+        sync_count = 0
         while self.running:
             try:
+                sync_count += 1
+                if sync_count <= 3 or sync_count % 60 == 0:
+                    logger.info(f"Sync #{sync_count} starting...")
                 sync_response = await self.client.sync(timeout=5000)
                 if not isinstance(sync_response, SyncResponse):
                     logger.error(f"Sync returned non-success response: {sync_response}")
@@ -248,10 +253,16 @@ class MatrixAdapter:
                         self.running = False
                         break
                     await asyncio.sleep(1)
-            except Exception as e:
-                logger.error(f"Sync error: {e}")
-                await asyncio.sleep(5)
-        
+                elif sync_count <= 3:
+                    logger.info(f"Sync #{sync_count} OK - rooms: {len(sync_response.rooms.join)}, invited: {len(sync_response.rooms.invite)}")
+            except BaseException as e:
+                logger.error(f"Sync error ({type(e).__name__}): {e}")
+                if isinstance(e, Exception):
+                    await asyncio.sleep(5)
+                else:
+                    raise
+
+        logger.error(f"Sync loop exited after {sync_count} syncs. running={self.running}")
         # Cleanup
         await self.client.close()
     
@@ -291,7 +302,10 @@ class MatrixAdapter:
         )
         
         # Handler in worker thread ausführen, damit der nio event loop nicht blockiert.
-        await asyncio.to_thread(self._handle_message_sync, matrix_message)
+        try:
+            await asyncio.to_thread(self._handle_message_sync, matrix_message)
+        except Exception as e:
+            logger.error(f"Error handling message from {sender}: {e}")
 
     async def _on_megolm_event(self, room: MatrixRoom, event: MegolmEvent):
         """Callback für verschlüsselte Events, die nio nicht entschlüsseln konnte."""
