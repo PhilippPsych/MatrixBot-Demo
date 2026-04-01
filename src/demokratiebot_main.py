@@ -882,7 +882,7 @@ class EllaChatBot:
         self.bot.add_handler("message", self.handle_message)
         
         # Debug commands
-        if TEST_MODE:
+        if TEST_MODE or PILOT_MODE:
             self.bot.add_handler("command:debug", self.handle_debug)
             self.bot.add_handler("command:trigger_intervention", self.handle_trigger_intervention)
             self.bot.add_handler("command:mygroup", self.handle_mygroup)
