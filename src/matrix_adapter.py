@@ -206,17 +206,28 @@ class MatrixAdapter:
         logger.info("Matrix message receiver started")
     
     def _run_sync_loop(self):
-        """Führt den async Event Loop in separatem Thread aus"""
-        self.loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(self.loop)
-        
-        try:
-            self.loop.run_until_complete(self._async_sync_loop())
-        except BaseException as e:
-            logger.error(f"Sync loop CRASHED: {type(e).__name__}: {e}")
-        finally:
-            logger.error("Sync thread exiting! This should not happen.")
-            self.loop.close()
+        """Führt den async Event Loop in separatem Thread aus — mit Auto-Restart"""
+        max_restarts = 50
+        for attempt in range(max_restarts):
+            self.loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(self.loop)
+            try:
+                self.loop.run_until_complete(self._async_sync_loop())
+                if not self.running:
+                    logger.info("Sync loop stopped gracefully.")
+                    break
+            except BaseException as e:
+                logger.error(f"Sync loop CRASHED (attempt {attempt+1}): {type(e).__name__}: {e}")
+            finally:
+                self.loop.close()
+
+            if not self.running:
+                break
+            wait = min(30, 5 * (attempt + 1))
+            logger.warning(f"Restarting sync loop in {wait}s (attempt {attempt+1}/{max_restarts})...")
+            time.sleep(wait)
+        else:
+            logger.error("Sync loop exceeded max restarts. Giving up.")
     
     async def _async_sync_loop(self):
         """Hauptschleife für Matrix Sync"""
