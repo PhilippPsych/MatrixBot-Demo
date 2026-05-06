@@ -1298,15 +1298,12 @@ Test-Modus: Aktiv"""
         if text_lower == 'trigger_intervention':
             self.handle_trigger_intervention(message)
             return
-        if text_lower.startswith('be') or text_lower == 'ready':
-            # "bereit", "Bereit", "BEREIT", "be", "ber", "ready" etc.
+        if text_lower in ['bereit', 'ready', 'be'] and not self.intervention_manager.handle_message(phone_number, text):
+            # Nur als Trigger wenn keine Intervention aktiv ist
             self.handle_trigger_intervention(message)
             return
         if text_lower == 'advance_day':
             self.handle_advance_day(message)
-            return
-        if text_lower == 'reset':
-            self.handle_reset(message)
             return
         if text_lower == 'reset':
             self.handle_reset(message)
