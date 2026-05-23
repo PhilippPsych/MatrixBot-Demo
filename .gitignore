@@ -37,3 +37,6 @@ sign_device*.py
 signature_payload.json
 *.backup*
 data/
+
+# Synapse Data
+synapse/
