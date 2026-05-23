@@ -31,6 +31,23 @@ class AIService:
                 api_key=self.api_key,
                 base_url="https://api.mistral.ai/v1",
             )
+
+        elif self.provider == "azure":
+            from openai import AzureOpenAI
+            self.api_key = os.getenv("AZUREAI_API_KEY")
+            endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+            deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4.1-mini")
+            api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+            if not self.api_key or not endpoint:
+                logger.error("AZUREAI_API_KEY or AZURE_OPENAI_ENDPOINT not set")
+                raise ValueError("Azure OpenAI credentials required")
+            self.model = deployment
+            self.client = AzureOpenAI(
+                api_key=self.api_key,
+                azure_endpoint=endpoint,
+                api_version=api_version,
+            )
+
         else:
             self.api_key = os.getenv("OPENAI_API_KEY")
             if not self.api_key:
